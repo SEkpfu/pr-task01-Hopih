@@ -14,8 +14,7 @@ int min(double arr[],int size){
     }
     return index+1;
 }
-
-double max(double arr[5],int size){
+double max(double arr[],int size){
     double max=0;
        for (int i=0;i<5;i++){
         if (arr[i]>max){
@@ -24,7 +23,6 @@ double max(double arr[5],int size){
     }
     return max;
 }
-
 double maxnumber(double arr[],int size){
     double max=0;
     int numbermax;
@@ -36,18 +34,34 @@ double maxnumber(double arr[],int size){
     }
     return numbermax+1;
 }
-
 int elem(double arr[],int size,int num){
     int d=0;
-    int count = sizeof(arr) / sizeof(arr[0]); 
-    for (int k=0;k<count;k++){
+    for (int k=0;k<5;k++){
         if (arr[k]>num){
             d=d+1;
         }
-
     }
     return d;
 }
+int sumer(double arr[],int size){
+    int k=0;
+    for (int i=0;i<5;i++){
+        k=k+arr[i];
+    }
+    return k;
+}
+
+
+int main(){
+    double a[5];
+    for (int i=0;i<5;i++){
+        cin>>a[i];
+    }
+    cout<<min(a,5)<<" "<<max(a,5)<<" "<<maxnumber(a,5)<<" "<<elem(a,5,7)<<" "<<sumer(a,5);
+    return 0;
+
+}
+
 
 
 
