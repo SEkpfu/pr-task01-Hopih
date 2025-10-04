@@ -28,10 +28,10 @@ int main(){
         d=d+mas[k][2][0];
     }
     cout <<d<<endl;
-    for (int r=1;r<4;r++){
+    for (int r=0;r<4;r++){
         if (mas[2][r][1]>zarp){
             zarp=mas[2][r][1];
-            num=r;
+            num=r+1;
         }
     }
     cout <<num<<endl;
@@ -43,6 +43,7 @@ int main(){
     }
     cout <<sum;
 }
+
 
 
 
